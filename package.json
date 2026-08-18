@@ -1,0 +1,29 @@
+{
+  "name": "agroprocurebd-backend",
+  "version": "1.0.0",
+  "description": "Node.js Express PostgreSQL backend for AgroProcureBD",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "dev": "nodemon server.js",
+    "start": "node server.js",
+    "db:schema": "psql \"$DATABASE_URL\" -f database/schema.sql",
+    "db:seed": "psql \"$DATABASE_URL\" -f database/seed.sql"
+  },
+  "dependencies": {
+    "bcryptjs": "latest",
+    "cors": "latest",
+    "dotenv": "latest",
+    "express": "latest",
+    "express-rate-limit": "latest",
+    "helmet": "latest",
+    "jsonwebtoken": "latest",
+    "morgan": "latest",
+    "multer": "latest",
+    "pg": "latest",
+    "zod": "latest"
+  },
+  "devDependencies": {
+    "nodemon": "latest"
+  }
+}
